@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConcertApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<main class= "container">
+	
+<section class= "row"><header class = " header jumbotron">Marc's concerts app</header>
+<%= yield %></section>
+
+<footer class ="row footer">Make sure to follow us on spotify, twitter, and ig</footer>
+</main>
+
+</body>
+</html>

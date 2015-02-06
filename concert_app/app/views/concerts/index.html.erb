@@ -1,0 +1,14 @@
+<h1>Concert#index</h1>
+
+
+
+<ul>
+	<% @concerts.each do |concert| %>
+		<li> <%= concert.artist%> -- <%= concert.venue%>, 
+		<br><%= concert.city%> date: <%= concert.date%>
+		<%= link_to('more_info', concert_details_path(concert))%>
+		
+		</li><br>		
+	<%end%>
+	
+</ul>

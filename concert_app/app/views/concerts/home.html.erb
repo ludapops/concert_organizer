@@ -1,0 +1,61 @@
+
+	<div class= "text-center">
+		<h1 >welcome</h1>
+		<ul class="col-lg-8 concert_list">
+			<% @concerts.each do |concert| %>
+				<li> <%= concert.artist%> -- <%= concert.venue%>, 
+				<br><%= concert.city%> date: <%= concert.date%>
+				<%= link_to('more_info', concert_details_path(concert))%>
+				
+				</li><br>		
+			<%end%>
+			
+		</ul>
+	</div>
+	<div id="sidebar-wrapper" class ="my_sidebar col-lg-4 pre-scrollable">
+ <!--            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Concerts this Month
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul> -->
+
+
+     <ul>
+      <li class="sidebar-brand">
+                    <a href="#">
+                        Concerts this Month
+                    </a>
+       </li>
+	<% @monthly_concerts.each do |concert| %>
+		<li> <%= concert.artist%> -- <%= concert.venue%>, 
+		<br><%= concert.city%> date: <%= concert.date%>
+		<%= link_to('more_info', concert_details_path(concert))%>
+		
+		</li><br>		
+	<%end%>
+	
+	</ul>
+     </div>
